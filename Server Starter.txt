@@ -1,0 +1,3 @@
+ls *.php | entr php -S 127.0.0.1:5000
+
+For context, this starts the entr script for a php server, it'll auto reload without me turning the server off and on again, i just have to refresh the web page
