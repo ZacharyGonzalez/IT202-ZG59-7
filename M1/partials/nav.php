@@ -1,5 +1,6 @@
 <?php
 //Note: this is to resolve cookie issues with port numbers
+session_start();
 $domain = $_SERVER["HTTP_HOST"];
 if (strpos($domain, ":")) {
     $domain = explode(":", $domain)[0];
@@ -19,7 +20,6 @@ if (($localWorks && $domain == "localhost") || $domain != "localhost") {
         "samesite" => "lax"
     ]);
 }
-session_start();
 require_once(__DIR__ . "/../lib/functions.php");
 
 ?>
