@@ -13,7 +13,7 @@
 </table></td></tr>
 <table><tr><td> <em>Deliverable 2: </em> Problem 2 - Only output the sum/total of the array values by assigning it to the $total variable (the number must end in 2 decimal places, if it ends in 1 it must have a 0 at the end) </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="https://github.com/Venrite/IT202-ZG59-7/blob/main/HW2/php2.png"></td></tr>
 <tr><td><table><tr><td> <em>Sub-Task 1: </em> 2 Screenshots: Clearly screenshot the output of Problem 2 showing the data and show the edited code</td></tr>
-<tr><td><table><tr><td><img width="100" height="20" src="https://github.com/Venrite/IT202-ZG59-7/blob/main/HW2/php2b.png"></td></tr>
+<tr><td><table><tr><td><img width="100" height="20" src="https://github.com/Venrite/IT202-ZG59-7/blob/main/HW2/php2b.png"><img width="100" height="20" src="https://github.com/Venrite/IT202-ZG59-7/blob/main/HW2/php2.png"></td></tr>
 <tr><td> <em>Caption:</em> (missing)</td></tr>
 </table></td></tr>
 <tr><td> <em>Sub-Task 2: </em> Describe how you solved the problem</td></tr>
@@ -21,7 +21,7 @@
 </table></td></tr>
 <table><tr><td> <em>Deliverable 3: </em> Problem 3 - Output the given values as positive under the "Positive Output" message (the data otherwise shouldn't change) </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="https://github.com/Venrite/IT202-ZG59-7/blob/main/HW2/php3.png"></td></tr>
 <tr><td><table><tr><td> <em>Sub-Task 1: </em> 2 Screenshots: Clearly screenshot the output of Problem 3 showing the data and show the code</td></tr>
-<tr><td><table><tr><td><img width="100" height="20" src="https://github.com/Venrite/IT202-ZG59-7/blob/main/HW2/php3b.png"></td></tr>
+<tr><td><table><tr><td><img width="100" height="20" src="https://github.com/Venrite/IT202-ZG59-7/blob/main/HW2/php3b.png"><img width="100" height="20" src="https://github.com/Venrite/IT202-ZG59-7/blob/main/HW2/php3.png"></td></tr>
 <tr><td> <em>Caption:</em> (missing)</td></tr>
 </table></td></tr>
 <tr><td> <em>Sub-Task 2: </em> Describe how you solved the problem</td></tr>
