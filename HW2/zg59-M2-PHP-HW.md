@@ -11,7 +11,7 @@
 <tr><td> <em>Sub-Task 2: </em> Describe how you solved the problem</td></tr>
 <tr><td> <em>Response:</em> <p>(missing)</p><br></td></tr>
 </table></td></tr>
-<table><tr><td> <em>Deliverable 2: </em> Problem 2 - Only output the sum/total of the array values by assigning it to the $total variable (the number must end in 2 decimal places, if it ends in 1 it must have a 0 at the end) </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="https://github.com/Venrite/IT202-ZG59-7/blob/main/HW2/php2.png"></td></tr>
+<table><tr><td> <em>Deliverable 2: </em> Problem 2 - Only output the sum/total of the array values by assigning it to the $total variable (the number must end in 2 decimal places, if it ends in 1 it must have a 0 at the end) </td></tr><tr><td><em>Status: </em> COMPLETED</td></tr>
 <tr><td><table><tr><td> <em>Sub-Task 1: </em> 2 Screenshots: Clearly screenshot the output of Problem 2 showing the data and show the edited code</td></tr>
 <tr><td><table><tr><td><img width="100" height="20" src="https://github.com/Venrite/IT202-ZG59-7/blob/main/HW2/php2b.png"><img width="100" height="20" src="https://github.com/Venrite/IT202-ZG59-7/blob/main/HW2/php2.png"></td></tr>
 <tr><td> <em>Caption:</em> (missing)</td></tr>
@@ -19,7 +19,7 @@
 <tr><td> <em>Sub-Task 2: </em> Describe how you solved the problem</td></tr>
 <tr><td> <em>Response:</em> <p>(missing)</p><br></td></tr>
 </table></td></tr>
-<table><tr><td> <em>Deliverable 3: </em> Problem 3 - Output the given values as positive under the "Positive Output" message (the data otherwise shouldn't change) </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="https://github.com/Venrite/IT202-ZG59-7/blob/main/HW2/php3.png"></td></tr>
+<table><tr><td> <em>Deliverable 3: </em> Problem 3 - Output the given values as positive under the "Positive Output" message (the data otherwise shouldn't change) </td></tr><tr><td><em>Status: </em> COMPLETED </td></tr>
 <tr><td><table><tr><td> <em>Sub-Task 1: </em> 2 Screenshots: Clearly screenshot the output of Problem 3 showing the data and show the code</td></tr>
 <tr><td><table><tr><td><img width="100" height="20" src="https://github.com/Venrite/IT202-ZG59-7/blob/main/HW2/php3b.png"><img width="100" height="20" src="https://github.com/Venrite/IT202-ZG59-7/blob/main/HW2/php3.png"></td></tr>
 <tr><td> <em>Caption:</em> (missing)</td></tr>
@@ -27,7 +27,7 @@
 <tr><td> <em>Sub-Task 2: </em> Describe how you solved the problem</td></tr>
 <tr><td> <em>Response:</em> <p>(missing)</p><br></td></tr>
 </table></td></tr>
-<table><tr><td> <em>Deliverable 4: </em> Misc Items </td></tr><tr><td><em>Status: </em> <img width="100" height="20" src="https://user-images.githubusercontent.com/54863474/211707795-a9c94a71-7871-4572-bfae-ad636f8f8474.png"></td></tr>
+<table><tr><td> <em>Deliverable 4: </em> Misc Items </td></tr><tr><td><em>Status: </em> COMPLETED</td></tr>
 <tr><td><table><tr><td> <em>Sub-Task 1: </em> Add the prod URL for problem1.php (remember you can assume this based on how the domain gets built (i.e., ucid-prod.herokuapp.com/...)</td></tr>
 <tr><td>Not provided</td></tr>
 <tr><td> <em>Sub-Task 2: </em> Add the prod URL for problem2.php (remember you can assume this based on how the domain gets built (i.e., ucid-prod.herokuapp.com/...)</td></tr>
