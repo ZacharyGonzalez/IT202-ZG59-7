@@ -27,7 +27,7 @@
 <tr><td> <em>Sub-Task 2: </em> Describe how you solved the problem</td></tr>
 <tr><td> <em>Response:</em> <p>if the value is a string, convert to float then take abs then typecast back to string. if its an in just take the absolute value of it.</p><br></td></tr>
 </table></td></tr>
-<table><tr><td> <em>Deliverable 4: </em> Misc Items </td></tr><tr><td><em>Status: </em> <span style="color: green;">COMPLETED</td></tr>
+<table><tr><td> <em>Deliverable 4: </em> Misc Items </td></tr><tr><td><em>Status: </em> <span style="color: green;">NOT REQUIRED</td></tr>
 <tr><td><table><tr><td> <em>Sub-Task 1: </em> Add the prod URL for problem1.php (remember you can assume this based on how the domain gets built (i.e., ucid-prod.herokuapp.com/...)</td></tr>
 <tr><td>Not provided</td></tr>
 <tr><td> <em>Sub-Task 2: </em> Add the prod URL for problem2.php (remember you can assume this based on how the domain gets built (i.e., ucid-prod.herokuapp.com/...)</td></tr>
