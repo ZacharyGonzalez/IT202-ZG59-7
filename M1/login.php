@@ -83,11 +83,6 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
                             $_SESSION["user"]["roles"] = []; //no roles
                         }
 
-
-
-
-
-
                         die(header("Location: home.php"));
                     } else {
                         echo "Invalid password";
