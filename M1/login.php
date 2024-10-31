@@ -61,11 +61,6 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
                     if (password_verify($password, $hash)) {
                         echo "Weclome $email";
                         $_SESSION["user"] = $user;
-
-
-
-
-
                         try {
                             //lookup potential roles
                             $stmt = $db->prepare("SELECT Roles.name FROM Roles 
