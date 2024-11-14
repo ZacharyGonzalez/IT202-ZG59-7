@@ -3,14 +3,36 @@ require_once(__DIR__ . "/partials/nav.php");
 if (!is_logged_in()) {
     die(header("Location: login.php"));
 }
+if (isset($_GET['role']) && $_GET['role'] == 1) {
+    echo '<p>You have do not have access to that webpage.</p>';
+}
 ?>
+<div id="notice" style="color: red; font-weight: bold; padding: 10px; display: none;">
+</div>
 <?php
+$notice_message = null;
 if (isset($_POST["save"])) {
     $email = se($_POST, "email", null, false);
     $username = se($_POST, "username", null, false);
+    $current_user_id = get_user_id(); 
+    $db = getDB();
+
+    $stmt = $db->prepare("SELECT id FROM Users WHERE email = :email AND id != :id LIMIT 1");
+    $stmt->execute([":email" => $email, ":id" => $current_user_id]);
+    //could use the same check as register.php but wanted to try php data object out since its supposedly more secure
+    $email_exists = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+    $stmt = $db->prepare("SELECT id FROM Users WHERE username = :username AND id != :id LIMIT 1");
+    $stmt->execute([":username" => $username, ":id" => $current_user_id]);
+    $username_exists = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+    if ($email_exists) {
+        $notice_message = "The email address is already in use by another user.";
+    } elseif ($username_exists) {
+        $notice_message = "The username is already in use by another user.";
+    }
 
     $params = [":email" => $email, ":username" => $username, ":id" => get_user_id()];
-    $db = getDB();
     $stmt = $db->prepare("UPDATE Users set email = :email, username = :username where id = :id");
     try {
         $stmt->execute($params);
@@ -44,7 +66,7 @@ if (isset($_POST["save"])) {
         }
     } catch (Exception $e) {
         //flash("An unexpected error occurred, please try again", "danger");
-        //echo "<pre>" . var_export($e->errorInfo, true) . "</pre>";
+        echo "<pre>" . var_export($e->errorInfo, true) . "</pre>";
     }
 
 
@@ -70,16 +92,23 @@ if (isset($_POST["save"])) {
 
                       //  flash("Password reset", "success");
                     } else {
+                        $notice_message = "Password invalid.";
                       //  flash("Current password is invalid", "warning");
                     }
                 }
             } catch (Exception $e) {
                 echo "<pre>" . var_export($e->errorInfo, true) . "</pre>";
             }
-        } else {
+        } else {$notice_message = "Password dont match.";
           //  flash("New passwords don't match", "warning");
         }
     }
+}
+if ($notice_message) {
+    echo "<script>
+            document.getElementById('notice').style.display = 'block';
+            document.getElementById('notice').innerText = '$notice_message';
+          </script>";
 }
 ?>
 

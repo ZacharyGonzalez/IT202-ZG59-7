@@ -1,4 +1,16 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MILESTONE 1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Milestone 1 - Zachary Gonzalez</h1>
+    </header>
+<?php //the fact i ripped this from another project and can just leave <body> like that is literally wild. not even including the footer yet
 //Note: this is to resolve cookie issues with port numbers
 session_start();
 $domain = $_SERVER["HTTP_HOST"];
