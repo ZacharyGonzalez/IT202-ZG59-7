@@ -71,6 +71,28 @@ if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm
         echo "Passwords must match";
         $hasError = true;
     }
+    //just a copy of the previous !hasError and modified as a check.
+    if (!$hasError) {
+        $db = getDB();
+        
+        //Check if the email already exists
+        $stmt = $db->prepare("SELECT COUNT(*) FROM Users WHERE email = :email");
+        $stmt->execute([":email" => $email]);
+        $emailExists = $stmt->fetchColumn();
+
+        //Check if the username already exists
+        $stmt = $db->prepare("SELECT COUNT(*) FROM Users WHERE username = :username");
+        $stmt->execute([":username" => $username]);
+        $usernameExists = $stmt->fetchColumn();
+
+        if ($emailExists > 0) {
+            echo "This email is already registered. Please use a different email.";
+            $hasError = true;
+        } elseif ($usernameExists > 0) {
+            echo "This username is already taken. Please choose a different username.";
+            $hasError = true;
+        }
+    }
     if (!$hasError) {
         echo "Welcome, $email";
         //TODO 4

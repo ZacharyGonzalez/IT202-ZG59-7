@@ -21,6 +21,12 @@ require(__DIR__ . "/partials/nav.php");
     }
 </script>
 <?php
+if (isset($_GET['logout']) && $_GET['logout'] == 1) {
+    echo '<p>You have logged out successfully.</p>';
+}
+if (isset($_GET['role']) && $_GET['role'] == 1) {
+    echo '<p>You have do not have access to that webpage.</p>';
+}
 //TODO 2: add PHP Code
 if (isset($_POST["email"]) && isset($_POST["password"])) {
     $email = se($_POST, "email", "", false);
