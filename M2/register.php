@@ -28,6 +28,7 @@ require(__DIR__ . "/partials/nav.php");
         return true;
     }
 </script>
+
 <?php
 //TODO 2: add PHP Code
 if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm"])) {
@@ -54,7 +55,7 @@ if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm
         $hasError = true;
     }
     if (empty($password)) {
-        echo "password must not be empty";
+        echo "Password must not be empty";
         $hasError = true;
     }
     if (empty($confirm)) {
@@ -71,18 +72,30 @@ if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["confirm
         echo "Passwords must match";
         $hasError = true;
     }
+
     if (!$hasError) {
         echo "Welcome, $email";
-        //TODO 4
+        
+        // Hash the password
         $hash = password_hash($password, PASSWORD_BCRYPT);
         $db = getDB();
         $stmt = $db->prepare("INSERT INTO Users (email, password, username) VALUES(:email, :password, :username)");
+        
         try {
+            // Insert the user into the Users table
             $stmt->execute([":email" => $email, ":password" => $hash, ":username" => $username]);
+
+            // Get the newly inserted user id
+            $user_id = $db->lastInsertId();
+
+            // Automatically insert a score record for the new user (set to 0 or any default value)
+            $score_stmt = $db->prepare("INSERT INTO Scores (user_id, score) VALUES(:user_id, :score)");
+            $score_stmt->execute([":user_id" => $user_id, ":score" => 0]); // Default score is 0
+            
             echo "Successfully registered!";
         } catch (Exception $e) {
             echo "There was a problem registering";
-            "<pre>" . var_export($e, true) . "</pre>";
+            echo "<pre>" . var_export($e, true) . "</pre>";
         }
     }
 }

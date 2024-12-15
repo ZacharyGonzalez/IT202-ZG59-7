@@ -1,6 +1,7 @@
 <?php
 require(__DIR__ . "/partials/nav.php");
 ?>
+
 <form onsubmit="return validate(this)" method="POST">
     <div>
         <label for="email">Email or Username</label>
